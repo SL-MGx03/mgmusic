@@ -12,9 +12,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 ABS="Developer"
 APPER="MGx03"
 OWNER="Owner"
-GITCLONE="https://t.me/reponotavailable/2"
+GITCLONE="https://t.me/musiclk123"
 B2="telegram.dog/SL_MGx03"
-BUTTON1="📜 Source Code 📜"
+BUTTON1="🎼 Main Group 🎧"
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -43,7 +43,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... your song...`')
+    m = message.reply('`📱 Searching... your song 🔎 `')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -74,7 +74,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**I couldnot find anything !**')
+            m.edit('** Sorry, I couldnot find anything ☹!**')
             return
     except Exception as e:
         m.edit(
@@ -82,13 +82,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`Uploading your song....`")
+    m.edit("`🎵 Uploading your song 📲`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Uploaded By:</b> "@musiclk123'
+        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Uploaded By:</b> @musiclk123'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
