@@ -74,7 +74,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('*I cant find anything !**')
+            m.edit('**I couldnot find anything !**')
             return
     except Exception as e:
         m.edit(
