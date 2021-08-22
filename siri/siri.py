@@ -12,7 +12,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 ABS="Developer"
 APPER="MGx03"
 OWNER="Owner"
-GITCLONE="https://github.com/ngmg2022/mgmusic"
+GITCLONE="https://t.me/reponotavailable/2"
 B2="telegram.dog/SL_MGx03"
 BUTTON1="📜 Source Code 📜"
 
