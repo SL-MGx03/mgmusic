@@ -9,7 +9,7 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ABS="Developer"
+ABS="Support Chat"
 APPER="MGx03"
 OWNER="Owner"
 GITCLONE="https://t.me/musiclk123"
