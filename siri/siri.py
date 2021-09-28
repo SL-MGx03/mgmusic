@@ -45,7 +45,7 @@ THUMB="bit.ly/thumbnil"
 def a(client, message):
     query=message.text
     print(query)
-    m = message.reply('fetching datas from m.youtube.com')
+    m = message.reply('📱 Searching... your song 🔎')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -76,7 +76,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing to found 🥺 Try with another!**')
+            m.edit('** Sorry, I couldnot find anything ☹!**')
             return
     except Exception as e:
         m.edit(
@@ -84,7 +84,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("**m.youtube.com responded, uploading...**")
+    m.edit("**🎵 Uploading your song 📲 **")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
